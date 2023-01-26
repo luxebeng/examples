@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/examples/playground/static/css/main.144eaf15.css",
+    "main.js": "/examples/playground/static/js/main.e1ab3421.js",
+    "static/media/miden_wasm_bg.wasm": "/examples/playground/static/media/miden_wasm_bg.3210115dc0d0c7d7ea1e.wasm",
+    "index.html": "/examples/playground/index.html",
+    "main.144eaf15.css.map": "/examples/playground/static/css/main.144eaf15.css.map",
+    "main.e1ab3421.js.map": "/examples/playground/static/js/main.e1ab3421.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.144eaf15.css",
+    "static/js/main.e1ab3421.js"
+  ]
+}
