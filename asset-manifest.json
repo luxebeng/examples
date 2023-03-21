@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/examples/static/css/main.3ae0772f.css",
-    "main.js": "/examples/static/js/main.fa4872be.js",
-    "static/media/miden_wasm_bg.wasm": "/examples/static/media/miden_wasm_bg.a063c1fce8047b6a1727.wasm",
+    "main.css": "/examples/static/css/main.6bc4f50f.css",
+    "main.js": "/examples/static/js/main.b66d1719.js",
+    "static/media/miden_wasm_bg.wasm": "/examples/static/media/miden_wasm_bg.978c552698b19741051d.wasm",
     "static/media/KaTeX_AMS-Regular.ttf": "/examples/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/examples/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
     "static/media/KaTeX_Main-Bold.ttf": "/examples/static/media/KaTeX_Main-Bold.8169508bf58f8bd92ad8.ttf",
@@ -65,11 +65,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/examples/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/examples/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/examples/index.html",
-    "main.3ae0772f.css.map": "/examples/static/css/main.3ae0772f.css.map",
-    "main.fa4872be.js.map": "/examples/static/js/main.fa4872be.js.map"
+    "main.6bc4f50f.css.map": "/examples/static/css/main.6bc4f50f.css.map",
+    "main.b66d1719.js.map": "/examples/static/js/main.b66d1719.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ae0772f.css",
-    "static/js/main.fa4872be.js"
+    "static/css/main.6bc4f50f.css",
+    "static/js/main.b66d1719.js"
   ]
 }
