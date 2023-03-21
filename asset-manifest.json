@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/examples/static/css/main.6bc4f50f.css",
-    "main.js": "/examples/static/js/main.b66d1719.js",
-    "static/media/miden_wasm_bg.wasm": "/examples/static/media/miden_wasm_bg.978c552698b19741051d.wasm",
+    "main.js": "/examples/static/js/main.7edaeab0.js",
+    "static/media/miden_wasm_bg.wasm": "/examples/static/media/miden_wasm_bg.83aae882f700cf754fe0.wasm",
     "static/media/KaTeX_AMS-Regular.ttf": "/examples/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/examples/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
     "static/media/KaTeX_Main-Bold.ttf": "/examples/static/media/KaTeX_Main-Bold.8169508bf58f8bd92ad8.ttf",
@@ -60,16 +60,16 @@
     "static/media/KaTeX_Size4-Regular.woff": "/examples/static/media/KaTeX_Size4-Regular.aeffd8025cba3647f1a6.woff",
     "static/media/KaTeX_Size1-Regular.woff2": "/examples/static/media/KaTeX_Size1-Regular.6eec866c69313624be60.woff2",
     "static/media/KaTeX_Size2-Regular.woff2": "/examples/static/media/KaTeX_Size2-Regular.2960900c4f271311eb36.woff2",
+    "static/media/Explainer.md": "/examples/static/media/Explainer.ad06e7df29136e51856c.md",
     "static/media/KaTeX_Size4-Regular.woff2": "/examples/static/media/KaTeX_Size4-Regular.e418bf257af1052628d8.woff2",
-    "static/media/Explainer.md": "/examples/static/media/Explainer.6b3c29a7fa514f277a7b.md",
     "static/media/KaTeX_Size3-Regular.woff": "/examples/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/examples/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/examples/index.html",
     "main.6bc4f50f.css.map": "/examples/static/css/main.6bc4f50f.css.map",
-    "main.b66d1719.js.map": "/examples/static/js/main.b66d1719.js.map"
+    "main.7edaeab0.js.map": "/examples/static/js/main.7edaeab0.js.map"
   },
   "entrypoints": [
     "static/css/main.6bc4f50f.css",
-    "static/js/main.b66d1719.js"
+    "static/js/main.7edaeab0.js"
   ]
 }
