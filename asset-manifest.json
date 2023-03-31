@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/examples/static/css/main.70968e1b.css",
-    "main.js": "/examples/static/js/main.02bb00e0.js",
-    "static/media/miden_wasm_bg.wasm": "/examples/static/media/miden_wasm_bg.468622094d8b4349bd21.wasm",
+    "main.js": "/examples/static/js/main.6b0a9280.js",
+    "static/media/miden_wasm_bg.wasm": "/examples/static/media/miden_wasm_bg.2387a17ef32a6da63fb4.wasm",
     "static/media/KaTeX_AMS-Regular.ttf": "/examples/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/examples/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
     "static/media/KaTeX_Main-Bold.ttf": "/examples/static/media/KaTeX_Main-Bold.8169508bf58f8bd92ad8.ttf",
@@ -53,9 +53,9 @@
     "static/media/KaTeX_Caligraphic-Bold.woff": "/examples/static/media/KaTeX_Caligraphic-Bold.d757c535a2e5902f1325.woff",
     "static/media/KaTeX_Caligraphic-Regular.woff": "/examples/static/media/KaTeX_Caligraphic-Regular.db074fa22cf224af93d7.woff",
     "static/media/KaTeX_Size3-Regular.ttf": "/examples/static/media/KaTeX_Size3-Regular.8d6b6822586eea3d3b20.ttf",
+    "static/media/Explainer.md": "/examples/static/media/Explainer.4ce1dee1347e0811977e.md",
     "static/media/KaTeX_Caligraphic-Bold.woff2": "/examples/static/media/KaTeX_Caligraphic-Bold.a1abf90dfd72792a577a.woff2",
     "static/media/KaTeX_Caligraphic-Regular.woff2": "/examples/static/media/KaTeX_Caligraphic-Regular.d6484fce1ef428d5bd94.woff2",
-    "static/media/Explainer.md": "/examples/static/media/Explainer.e2b77fce9afbe0b5b78d.md",
     "static/media/KaTeX_Size1-Regular.woff": "/examples/static/media/KaTeX_Size1-Regular.0108e89c9003e8c14ea3.woff",
     "static/media/KaTeX_Size2-Regular.woff": "/examples/static/media/KaTeX_Size2-Regular.3a99e70aee4076660d38.woff",
     "static/media/KaTeX_Size4-Regular.woff": "/examples/static/media/KaTeX_Size4-Regular.aeffd8025cba3647f1a6.woff",
@@ -66,10 +66,10 @@
     "static/media/KaTeX_Size3-Regular.woff2": "/examples/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/examples/index.html",
     "main.70968e1b.css.map": "/examples/static/css/main.70968e1b.css.map",
-    "main.02bb00e0.js.map": "/examples/static/js/main.02bb00e0.js.map"
+    "main.6b0a9280.js.map": "/examples/static/js/main.6b0a9280.js.map"
   },
   "entrypoints": [
     "static/css/main.70968e1b.css",
-    "static/js/main.02bb00e0.js"
+    "static/js/main.6b0a9280.js"
   ]
 }
