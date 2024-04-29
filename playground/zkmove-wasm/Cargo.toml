@@ -1,0 +1,47 @@
+[package]
+name = "zkmove-wasm"
+version = "0.3.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = ["rayon"]
+rayon = []
+dev-graph = ["halo2_proofs/dev-graph", "plotters"]
+
+[dependencies]
+halo2_proofs = { git = "https://github.com/privacy-scaling-explorations/halo2.git", tag = "v0.3.0" }
+move-binary-format = { git = "https://github.com/young-rocks/move", rev = "b036995a" }
+plotters = { version = "0.3.0", optional = true }
+rand = "0.8"
+serde = { version = "1.0.138", features = ["derive"] }
+serde_json = "1.0.82"
+tabbycat = { version = "0.1", features = ["attributes"], optional = true }
+rand_core = { version = "0.6", default-features = false, features = ["getrandom"] }
+
+#[patch."https://github.com/zkmove/zkmove-vm.git"]
+error = { path = "../../../zkmove-vm/common/error" }
+logger = { path = "../../../zkmove-vm/common/logger" }
+movelang = { path = "../../../zkmove-vm/movelang" }
+vm = { path = "../../../zkmove-vm/vm" }
+vm-circuit = { path = "../../../zkmove-vm/vm-circuit" }
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.0"
+
+[target.'cfg(target_family = "wasm")'.dependencies]
+getrandom = { version = "0.2", features = ["js"]}
+wasm-bindgen = { version = "0.2.91", features = ["serde-serialize"]}
+console_error_panic_hook = "0.1.7"
+rayon = "1.5"
+wasm-bindgen-rayon = { version = "1.0.3"}
+web-sys = { version = "0.3", features = ["Request", "Window", "Response", "console", "File"] }
+wasm-bindgen-futures = "0.4.41"
+js-sys = "0.3"
+
+# https://github.com/Amanieu/parking_lot/issues/269
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+parking_lot_core = "=0.8.0"
