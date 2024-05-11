@@ -1,11 +1,11 @@
 import { ReactCodeMirrorProps } from '@uiw/react-codemirror';
-import { DebugCommand, DebugExecutor, DebugOutput } from 'miden-wasm';
+import { DebugCommand, DebugExecutor, DebugOutput } from 'zkmove-wasm';
 import DebugButton from '../DebugButtons';
 import { formatDebuggerOutput } from '../../utils/helper_functions';
 import Editor from './Editor';
 import EditorLabel from './EditorLabel';
 
-type MidenOutputsProps = {
+type ZkmoveOutputsProps = {
   showDebug: boolean;
   debugExecutor: DebugExecutor | null;
   value: string;
@@ -13,11 +13,11 @@ type MidenOutputsProps = {
   theme: ReactCodeMirrorProps['theme'];
 };
 
-const MidenOutputs = ({
+const ZkmoveOutputs = ({
   showDebug,
   debugExecutor,
   ...props
-}: MidenOutputsProps): JSX.Element => {
+}: ZkmoveOutputsProps): JSX.Element => {
   /** This executes a command in the debug menu. */
   const executeDebug = async (command: DebugCommand, params?: bigint) => {
     try {
@@ -66,4 +66,4 @@ const MidenOutputs = ({
   );
 };
 
-export default MidenOutputs;
+export default ZkmoveOutputs;

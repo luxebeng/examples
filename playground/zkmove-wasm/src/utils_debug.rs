@@ -1,12 +1,39 @@
 use crate::utils_input::Inputs;
-use crate::utils_program::{MidenProgram, DEBUG_ON};
+use crate::utils_program::{ZkMoveProgram, DEBUG_ON};
 use miden_vm::{math::StarkField, VmState, VmStateIterator, Word, DefaultHost, MemAdviceProvider};
 use wasm_bindgen::prelude::*;
+
+/// Stub struct and functions
+
+// pub type Word = [u64; 4];
+// pub struct VmStateIterator {
+//     // chiplets: Chiplets,
+//     // decoder: Decoder,
+//     // stack: Stack,
+//     // system: System,
+//     // error: Option<ExecutionError>,
+//     clk: u32,
+//     asmop_idx: usize,
+//     forward: bool,
+//     // trace_len_summary: TraceLenSummary,
+// }
+
+// #[derive(Clone, Debug, Eq, PartialEq)]
+// pub struct VmState {
+//     pub clk: u32,
+//     pub ctx: u32,
+//     // pub op: Option<Operation>,
+//     // pub asmop: Option<AsmOpInfo>,
+//     // pub fmp: Felt,
+//     // pub stack: Vec<Felt>,
+//     pub memory: Vec<(u64, Word)>,
+// }
 
 // This is the main struct that will be exported to JS
 // It will be used to execute debug commands against the VM
 #[wasm_bindgen]
 pub struct DebugExecutor {
+    #[allow(dead_code)]
     vm_state_iter: VmStateIterator,
     vm_state: VmState,
 }
@@ -43,7 +70,7 @@ impl DebugExecutor {
     /// Returns an error if the command cannot be parsed.
     #[wasm_bindgen(constructor)]
     pub fn new(code_frontend: &str, inputs_frontend: &str) -> Result<DebugExecutor, String> {
-        let mut program = MidenProgram::new(code_frontend, DEBUG_ON);
+        let mut program = ZkMoveProgram::new(code_frontend, DEBUG_ON);
         program.compile_program().unwrap();
 
         let mut inputs = Inputs::new();
@@ -56,12 +83,21 @@ impl DebugExecutor {
             inputs.stack_inputs,
             host,
         );
-
         let vm_state = vm_state_iter
             .next()
             .ok_or("Failed to instantiate DebugExecutor - `VmStateIterator` is not yielding!")?
             .expect("initial state of vm must be healthy!");
 
+        // let mut vm_state_iter = VmStateIterator {
+        //     clk: 0,
+        //     asmop_idx: 0,
+        //     forward: false,  
+        // };
+        // let vm_state = VmState {
+        //     clk: 0,
+        //     ctx: 0,
+        //     memory: Vec::new(),
+        // };
         Ok(Self {
             vm_state_iter,
             vm_state,
@@ -126,22 +162,24 @@ impl DebugExecutor {
 
     /// iterates to the next clock cycle.
     fn next_vm_state(&mut self) -> Option<VmState> {
-        match self.vm_state_iter.next() {
-            Some(Ok(vm_state)) => Some(vm_state),
-            Some(Err(err)) => {
-                println!("Execution error: {err:?}");
-                None
-            }
-            None => {
-                println!("Program execution complete.");
-                None
-            }
-        }
+        // match self.vm_state_iter.next() {
+        //     Some(Ok(vm_state)) => Some(vm_state),
+        //     Some(Err(err)) => {
+        //         println!("Execution error: {err:?}");
+        //         None
+        //     }
+        //     None => {
+        //         println!("Program execution complete.");
+        //         None
+        //     }
+        // }
+        None
     }
 
     /// iterates to the previous clock cycle.
     fn prev_vm_state(&mut self) -> Option<VmState> {
-        self.vm_state_iter.back()
+        // self.vm_state_iter.back()
+         None
     }
 
     // ACCESSORS
@@ -158,11 +196,16 @@ impl DebugExecutor {
 
         let output = DebugOutput {
             clk: self.vm_state.clk,
-            op: self.vm_state.op.map(|v| format!("{:?}", v)),
-            instruction: self.vm_state.asmop.clone().map(|v| format!("{:?}", v.op())),
-            num_of_operations: self.vm_state.asmop.clone().map(|v| v.num_cycles()),
-            operation_index: self.vm_state.asmop.clone().map(|v| v.cycle_idx()),
-            stack: self.vm_state.stack.iter().map(|x| x.as_int()).collect(),
+            //op: self.vm_state.op.map(|v| format!("{:?}", v)),
+            //instruction: self.vm_state.asmop.clone().map(|v| format!("{:?}", v.op())),
+            //num_of_operations: self.vm_state.asmop.clone().map(|v| v.num_cycles()),
+            //operation_index: self.vm_state.asmop.clone().map(|v| v.cycle_idx()),
+            //stack: self.vm_state.stack.iter().map(|x| x.as_int()).collect(),
+            op: None,
+            instruction: None,
+            num_of_operations: None,
+            operation_index: None,
+            stack: Vec::new(),
             memory: transform_2d_to_1d(memory),
         };
 
@@ -171,11 +214,12 @@ impl DebugExecutor {
 
     /// Returns `true` if the current state should break.
     fn should_break(&self) -> bool {
-        self.vm_state
-            .asmop
-            .as_ref()
-            .map(|asm| asm.should_break())
-            .unwrap_or(false)
+        // self.vm_state
+        //     .asmop
+        //     .as_ref()
+        //     .map(|asm| asm.should_break())
+        //     .unwrap_or(false)
+        false
     }
 }
 

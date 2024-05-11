@@ -1,14 +1,14 @@
 use miden_stdlib::StdLibrary;
 use miden_vm::{Assembler, Kernel, Program, ProgramInfo};
 
-pub struct MidenProgram {
+pub struct ZkMoveProgram {
     pub assembler: Assembler,
     pub masm_code: String,
     pub program: Option<Program>,
     pub program_info: Option<ProgramInfo>,
 }
 
-impl MidenProgram {
+impl ZkMoveProgram {
     pub fn new<S: AsRef<str>>(code_as_str: S) -> Self {
         Self {
             assembler: Assembler::default(),

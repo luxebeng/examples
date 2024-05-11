@@ -11,9 +11,9 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon
 } from '@heroicons/react/20/solid';
-import { DebugCommand } from 'miden-wasm';
+import { DebugCommand } from 'zkmove-wasm';
 
-type MidenCodeProps = {
+type ZkmoveCodeProps = {
   value: string;
   showDebug: boolean;
   onChange: (value: string) => void;
@@ -36,7 +36,7 @@ const codeTheme = createTheme({
   styles: [{ tag: t.comment, color: '#787b8099' }]
 });
 
-const MidenCode = (props: MidenCodeProps): JSX.Element => {
+const ZkmoveCode = (props: ZkmoveCodeProps): JSX.Element => {
   const saveFile = () => {
     const blob = new Blob([props.value], { type: 'text/plain' });
 
@@ -143,4 +143,4 @@ const MidenCode = (props: MidenCodeProps): JSX.Element => {
   );
 };
 
-export default MidenCode;
+export default ZkmoveCode;

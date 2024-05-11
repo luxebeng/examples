@@ -21,6 +21,7 @@ serde = { version = "1.0.138", features = ["derive"] }
 serde_json = "1.0.82"
 tabbycat = { version = "0.1", features = ["attributes"], optional = true }
 rand_core = { version = "0.6", default-features = false, features = ["getrandom"] }
+hex = { version = "0.4", default-features = false }
 
 #[patch."https://github.com/zkmove/zkmove-vm.git"]
 error = { path = "../../../zkmove-vm/common/error" }
@@ -28,6 +29,8 @@ logger = { path = "../../../zkmove-vm/common/logger" }
 movelang = { path = "../../../zkmove-vm/movelang" }
 vm = { path = "../../../zkmove-vm/vm" }
 vm-circuit = { path = "../../../zkmove-vm/vm-circuit" }
+miden-vm = { package = "miden-vm", version = "0.7.0", default-features = false }
+miden-stdlib = { package = "miden-stdlib", version = "0.6.0", default-features = false }
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3.0"
@@ -39,9 +42,5 @@ console_error_panic_hook = "0.1.7"
 rayon = "1.5"
 wasm-bindgen-rayon = { version = "1.0.3"}
 web-sys = { version = "0.3", features = ["Request", "Window", "Response", "console", "File"] }
-wasm-bindgen-futures = "0.4.41"
+wasm-bindgen-futures = "0.4.42"
 js-sys = "0.3"
-
-# https://github.com/Amanieu/parking_lot/issues/269
-[target.'cfg(target_arch = "wasm32")'.dependencies]
-parking_lot_core = "=0.8.0"

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { isMobile } from 'mobile-device-detect';
 import DropDown from '../components/DropDown';
-import MidenInputs from '../components/CodingEnvironment/MidenInputs';
-import MidenEditor from '../components/CodingEnvironment/MidenCode';
+import ZkmoveInputs from '../components/CodingEnvironment/ZkmoveInputs';
+import ZkmoveEditor from '../components/CodingEnvironment/ZkmoveCode';
 import InstructionTable from './InstructionTable';
 
 import init, {
@@ -13,7 +13,7 @@ import init, {
   verify_program,
   DebugCommand,
   DebugOutput
-} from 'miden-wasm';
+} from 'zkmove-wasm';
 import toast, { Toaster } from 'react-hot-toast';
 import {
   getExample,
@@ -343,7 +343,7 @@ export default function CodingEnvironment(): JSX.Element {
   };
 
   /**
-   * This runs the program using the MidenVM and displays the output.
+   * This runs the program using the ZkmoveVM and displays the output.
    * It runs the Rust program that is imported above.
    */
   const runProgram = async () => {
@@ -393,7 +393,7 @@ export default function CodingEnvironment(): JSX.Element {
   };
 
   /**
-   * This proves the program using the MidenVM and displays the output.
+   * This proves the program using the ZkmoveVM and displays the output.
    * It runs the Rust program that is imported above.
    */
   const proveProgram = async () => {
@@ -639,7 +639,7 @@ export default function CodingEnvironment(): JSX.Element {
               </div>
 
               <div className="h-px bg-secondary-4 mb-4"></div>
-              <MidenEditor
+              <ZkmoveEditor
                 value={code}
                 showDebug={showDebug}
                 onChange={setCode}
@@ -753,7 +753,7 @@ export default function CodingEnvironment(): JSX.Element {
                       </div>
                     )}
                     {isCodeEditorVisible && (
-                      <MidenInputs
+                      <ZkmoveInputs
                         value={inputs}
                         onChange={setCodeUploadContent}
                       />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import MidenLogo from './MidenLogo';
+import ZkmoveLogo from './ZkmoveLogo';
 import { Dialog } from '@headlessui/react';
 import {
   Bars3Icon,
@@ -38,7 +38,7 @@ const Header = () => {
             className="flex -m-1.5 px-1.5"
           >
             <span className="sr-only">Polygon Miden</span>
-            <MidenLogo className="fill-white h-10 w-auto" />
+            <ZkmoveLogo className="fill-white h-10 w-auto" />
 
             <h1 className="flex text-xl items-center font-semibold leading-6 text-white">
               Polygon Miden
@@ -94,7 +94,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Polygon Miden</span>
-              <MidenLogo className="fill-gray-900 h-10 w-auto" />
+              <ZkmoveLogo className="fill-gray-900 h-10 w-auto" />
             </a>
             <button
               type="button"

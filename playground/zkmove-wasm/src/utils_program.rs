@@ -1,7 +1,7 @@
 use miden_stdlib::StdLibrary;
 use miden_vm::{Assembler, Kernel, Program, ProgramInfo};
 
-pub struct MidenProgram {
+pub struct ZkMoveProgram {
     pub assembler: Assembler,
     pub masm_code: String,
     pub debug: bool,
@@ -9,10 +9,11 @@ pub struct MidenProgram {
     pub program_info: Option<ProgramInfo>,
 }
 
+#[allow(dead_code)]
 pub const DEBUG_OFF: bool = false;
 pub const DEBUG_ON: bool = true;
 
-impl MidenProgram {
+impl ZkMoveProgram {
     pub fn new(code_as_str: &str, debug: bool) -> Self {
         Self {
             assembler: Assembler::default(),

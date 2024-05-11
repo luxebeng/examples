@@ -1,7 +1,6 @@
 {
-  "name": "miden-assembly-examples-playground",
+  "name": "zkmove-assembly-examples-playground",
   "version": "0.1.0",
-  "homepage": "https://0xpolygonmiden.github.io/examples",
   "private": true,
   "dependencies": {
     "@codemirror/theme-one-dark": "^6.1.0",
@@ -15,7 +14,7 @@
     "@uiw/react-codemirror": "^4.6.0",
     "html-loader": "^4.2.0",
     "list-react-files": "^0.2.0",
-    "miden-wasm": "file:miden-wasm/pkg",
+    "zkmove-wasm": "file:zkmove-wasm/pkg",
     "mobile-device-detect": "^0.4.3",
     "node-gyp": "^9.3.1",
     "raw-loader": "^4.0.2",
@@ -37,13 +36,13 @@
     "yup": "^1.0.2"
   },
   "scripts": {
-    "build:miden": "cd miden-wasm && wasm-pack build --target web --out-dir pkg",
+    "build:zkmove": "cd zkmove-wasm && wasm-pack build --target web --out-dir pkg",
     "predeploy": "npm run build",
     "deploy": "npm run build && gh-pages -d build -b main",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:wasm": "cd miden-wasm && wasm-pack build --target web --out-dir pkg",
-    "test": "jest && cd miden-wasm && cargo test",
+    "build:wasm": "cd zkmove-wasm && wasm-pack build --target web --out-dir pkg",
+    "test": "jest && cd zkmove-wasm && cargo test",
     "test:watch": "jest --watch",
     "webpack": "npx webpack",
     "eject": "react-scripts eject",
@@ -101,20 +100,20 @@
     "ts-node": "^10.9.1",
     "typescript": "^4.9.4"
   },
-  "description": "Playground for example programs for the [Miden VM](https://github.com/0xPolygonMiden/miden-vm) in Miden assembly.",
+  "description": "Playground for example programs for the [Zkmove VM](https://github.com/zkmove/zkmove-vm) in zkmove assembly.",
   "main": "webpack.config.js",
   "directories": {
     "example": "examples"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/0xPolygonMiden/examples.git"
+    "url": "git+https://github.com/luxebeng/examples.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/0xPolygonMiden/examples/issues"
+    "url": "https://github.com/luxebeng/examples/issues"
   },
   "pre-commit": [
     "test",

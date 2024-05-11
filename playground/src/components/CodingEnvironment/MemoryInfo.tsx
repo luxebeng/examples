@@ -1,4 +1,4 @@
-import { DebugOutput } from 'miden-wasm';
+import { DebugOutput } from 'zkmove-wasm';
 
 import 'katex/dist/katex.min.css';
 import { formatMemory } from '../../utils/helper_functions';

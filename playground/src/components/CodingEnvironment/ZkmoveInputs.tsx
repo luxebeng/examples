@@ -2,7 +2,7 @@ import { createTheme } from '@uiw/codemirror-themes';
 import CodeMirror from '@uiw/react-codemirror';
 import { tags as t } from '@lezer/highlight';
 
-type MidenInputsProps = {
+type ZkmoveInputsProps = {
   value: string;
   onChange: (value: string) => void;
 };
@@ -22,7 +22,7 @@ const codeTheme = createTheme({
   styles: [{ tag: t.comment, color: '#787b8099' }]
 });
 
-const MidenInputs = (props: MidenInputsProps): JSX.Element => (
+const ZkmoveInputs = (props: ZkmoveInputsProps): JSX.Element => (
   <div className="flex w-full overflow-auto">
     <CodeMirror
       value={props.value}
@@ -45,4 +45,4 @@ const MidenInputs = (props: MidenInputsProps): JSX.Element => (
   </div>
 );
 
-export default MidenInputs;
+export default ZkmoveInputs;

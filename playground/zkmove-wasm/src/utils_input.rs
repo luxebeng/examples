@@ -5,6 +5,12 @@ use miden_vm::{
     AdviceInputs, MemAdviceProvider, StackInputs, StackOutputs, Word,
 };
 
+//use std::collections::BTreeMap;
+//use crate::utils_debug::Word;
+
+//pub struct BaseElement(u64);
+//pub use BaseElement as Felt;
+
 /// The Outputs struct is used to serialize the output of the program.
 /// Via Rust WASM we cannot return arbitrary structs, so we need to serialize it to JSON.
 /// Here we need the Outputs because they can be inputs for the verifier.
@@ -214,7 +220,7 @@ impl InputFile {
     }
 }
 
-/// Miden Inputs plus Outputs that are used as inputs for the verifier.
+/// Zkmove Inputs plus Outputs that are used as inputs for the verifier.
 pub struct Inputs {
     pub stack_inputs: StackInputs,
     pub advice_provider: MemAdviceProvider,
@@ -242,6 +248,7 @@ impl Inputs {
     }
 
     // Parse the outputs as str and return a vector of u64
+    #[allow(dead_code)]
     pub fn deserialize_outputs(&mut self, outputs_as_str: &str) -> Result<(), String> {
         let outputs_as_json: Outputs =
             serde_json::from_str(outputs_as_str).map_err(|e| e.to_string())?;

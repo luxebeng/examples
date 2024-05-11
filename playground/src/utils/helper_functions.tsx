@@ -1,16 +1,16 @@
 // prettier-ignore-file
 import * as yup from 'yup';
-import type { DebugOutput } from 'miden-wasm';
+import type { DebugOutput } from 'zkmove-wasm';
 
 /**
  * Helper function to get the example from the examples repo.
  */
 export async function getExample(example: string) {
   const inputs = fetch(
-    `https://raw.githubusercontent.com/0xPolygonMiden/examples/main/examples/${example}.inputs`
+    `https://raw.githubusercontent.com/luxebeng/examples/main/examples/${example}.inputs`
   );
   const masm = fetch(
-    `https://raw.githubusercontent.com/0xPolygonMiden/examples/main/examples/${example}.masm`
+    `https://raw.githubusercontent.com/luxebeng/examples/main/examples/${example}.masm`
   );
   return [(await inputs).text(), (await masm).text()];
 }
@@ -188,7 +188,7 @@ export function checkOutputs(jsonString: string): checkedData {
   try {
     jsonOutput = JSON.parse(jsonString);
   } catch (e: any) { // eslint-disable-line @typescript-eslint/no-explicit-any
-    const errorMessage = `Miden VM Outputs need to be a valid JSON object:
+    const errorMessage = `Zkmove VM Outputs need to be a valid JSON object:
 ${e.message}
 Did you prove the program first?`;
     return { isValid: false, errorMessage: errorMessage };

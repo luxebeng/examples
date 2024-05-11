@@ -60,7 +60,7 @@ describe('NavBar Component', () => {
     );
 
     expect(getByTestId('logo')).toBeInTheDocument();
-    expect(getByTestId('logo')).toHaveTextContent('Playground for Miden VM');
+    expect(getByTestId('logo')).toHaveTextContent('Playground for Zkmove VM');
 
     expect(getByTestId('top-links')).toBeInTheDocument();
 

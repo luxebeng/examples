@@ -47,7 +47,7 @@ describe('checkInputs function', () => {
   it("should return false if neither 'operand_stack' nor 'advice_stack' is there", async () => {
     expect(checkInputs(emptyJson)).toStrictEqual({
       isValid: false,
-      errorMessage: `Miden VM Inputs can be empty or
+      errorMessage: `Zkmove VM Inputs can be empty or
 we need either a operand_stack or
 an advice_stack.`
     });
@@ -78,7 +78,7 @@ Did you prove the program first?`
   it('should return false if outputs is incorrect JSON', async () => {
     expect(checkOutputs(incorrect_json)).toStrictEqual({
       isValid: false,
-      errorMessage: `Miden VM Outputs need to be a valid JSON object:
+      errorMessage: `Zkmove VM Outputs need to be a valid JSON object:
 Expected property name or '}' in JSON at position 1
 Did you prove the program first?`
     });
